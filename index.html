@@ -15,11 +15,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+		<script src="https://cdn.firebase.com/js/client/1.0.23/firebase.js"></script>
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -44,10 +44,9 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h2>Firebase Happy Hour in Berlin!</h2>
-					<img src="/firebase-presentation/img/mark.png"/>
-					<img class="heart" src="/firebase-presentation/img/heart.png"/>
-					<img class="intro" src="/firebase-presentation/img/berlin.jpg"/>
+					<h2>Building Realtime Applications with Firebase</h2>
+					<!-- <img src="/img/mark.png"/> -->
+					<img class="intro" src="/img/1871_logo.png"/>
 				</section>
 
 				<section>
@@ -55,10 +54,11 @@
 					<div>
 						<h2>Agenda</h2>
 						<ul>
-						<li>Sara - What is Firebase?</li>
-						<li>Tom - Blaze Security Compiler</li>	
-						<li>Jonny - GeoFire</li>
-						<li>Firebase dev presentations - Lukas, Oori, Eckard</li>
+						<li>Who am I?</li>
+						<li>What's wrong with app development?</li>
+						<li>How can Firebase help?</li>
+						<li>Live coding demo!</li>	
+						<li>Classkick + Firebase</li>
 						</ul>
 					</div>
 				</section>
@@ -66,50 +66,68 @@
 				<section>
 
 					<div>
-						<h2>I'm Sara</h2>
+						<h2>I'm Mike</h2>
 						<ul>
+						<li>Engineer @ Firebase</li>
 						<li>San Francisco, CA</li>	
-						<li>Developer Advocate @ Firebase</li>
-						<li><a href="https://twitter.com/srobtweets">@SRobTweets</a></li>
+						<li><a href="https://twitter.com/asciimike">@asciimike</a></li>
+						<li><a href="mailto://mcdonald@firebase.com"></a>mcdonald@firebase.com</li>
 						</ul>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<h2>A modern application is:</h2>
+						<ul>
+							<li>Cross-platform</li>
+							<li>Responsive</li>
+							<li>Unique</li>
+							<li>Secure</li>
+						</ul>
+						<br/>
+						<br/>
+						<p id="instant-backend" style="font-style:italic">Traditional systems can't support these demands</p>
 					</div>
 				</section>
 
 				<section>
 					<h2>What is Firebase?</h2>
                     <br/>
-                    <p id="instant-backend">
+                    <p id="instant-backend" style="font-style:italic">
                         Firebase is a platform for building realtime apps
                         <br/><br/>
-                    <div class="fb-point" style="margin:20px;font-size: .8em"><span class="g-bold">Data</span><br/> store and sync data across clients
+                    <div class="fb-point" style="margin:20px;font-size: .8em"><span class="g-bold" style="font-weight:bold">Data:</span> store and sync data across clients
                     </div>
-                    <div class="fb-point" style="margin:20px;font-size: .8em"><span class="g-bold">Authentication</span> easily authenticate users
+                    <div class="fb-point" style="margin:20px;font-size: .8em"><span class="g-bold" style="font-weight:bold">Authentication:</span> easily authenticate users across multiple providers
                     </div>
-                    <div class="fb-point" style="margin:20px;font-size: .8em"><span class="g-bold">Hosting</span><br/> production-grade static asset hosting
+                    <div class="fb-point" style="margin:20px;font-size: .8em"><span class="g-bold" style="font-weight:bold">Hosting:</span> production-grade static asset hosting
                     </div>
 				</section>
 
 				<section>
 					<h2>Works Across Platforms</h2>
-					<img src="/firebase-presentation/img/frameworks.png"/>
+					<img src="/img/frameworks.png"/>
 				</section>
 
 				<section>
                     <h2>More About Firebase</h2>
                     <br/>
                     <ul id="firebase-2">
+                    	<li>Founded in 2011 in SF</li>
+                    	<br/>
                         <li>100,000 registered developers</li>
-                        <br/>
-                        <li>Founded in 2011 in SF</li>
-                        <br/>
-                        <li>Customers include: Citrix, CBS, <br/>Twitch, Warby Parker, and <br/>Coffee Meets Bagel</li>
                         <br/>
                         <li>1M concurrent connections <br/> on Firebase sites</li>
                         <br/>
-                        <li>Billions of operations per week</li>
+                        <li>Customers include: Citrix, CBS, <br/>Twitch, Nest, and Instacart</li>
                         <br/>
                     </ul>
-                    <img src="img/team.png" id="team">
+                </section>
+
+                <section>
+                	<h2>Our Team</h2>
+                	<img src="img/team.png" id="team">
                 </section>
 
 				<section>
@@ -117,8 +135,8 @@
 					<br/><br/>
 					<h4>Write Data to Firebase</h4>
 					<pre><code data-trim>
-var ref = new Firebase("https://betahaus.firebaseio-demo.com/");
-ref.set("Hello Berlin!");</code></pre>
+var ref = new Firebase("https://1871.firebaseio-demo.com/");
+ref.set("Hello Chicago!");</code></pre>
 					<br/><br/>
 					<h4>Read Data from Firebase</h4>
 					<pre><code data-trim>
@@ -130,7 +148,7 @@ ref.on("value", function (snapshot) {
 				</section>
 
 				<section>
-					<h3>Resources</h3>
+					<h2>Resources</h2>
 					<br/>
 					<ul>
 						<li>Try Firebase - <a href="https://www.firebase.com/tutorial" target="_blank">firebase.com/tutorial</a></li>
@@ -144,6 +162,10 @@ ref.on("value", function (snapshot) {
 					</ul>
 					<br/><br/>
 					<p class="g-bold">Thank You!</p>
+				</section>
+
+				<section>
+					<h2>Live Coding Demo!</h2>
 				</section>
 			</div>
 
