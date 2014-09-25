@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -44,7 +44,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h2>Building Realtime Applications with Firebase</h2>
+					<h2>Building realtime applications with Firebase</h2>
 					<!-- <img src="/img/mark.png"/> -->
 					<img class="intro" src="/img/1871_logo.png"/>
 				</section>
@@ -77,6 +77,41 @@
 				</section>
 
 				<section>
+					<h2>App development is broken</h2>
+					<br/>
+					<br/>
+					<div class="fragment">
+						<p class="text-medium">Because there is a disconnect between what developers want...</p>
+					</div>
+					<div class="fragment">
+						<p class="text-medium">...and what users care about</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>What do developers want?</h2>
+					<ul>
+						<li>Ease of development</li>
+						<li>Performant systems</li>
+						<li>Scalable and maintainable infrastructure</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What do customers want?</h2>
+					<!-- <ul>
+						<li>Amazing UX</li>
+					</ul> -->
+					<img src="/img/gdocs-realtime2.gif" alt="" />
+				</section>
+
+				<!-- <section data-hero="">
+					<h3>This is what apps look like now</h3>
+					<p>Our backend isn't just that one box, it's much more complicated</p>
+					<img src="/img/data-sync.gif" alt="">
+				</section> -->
+				
+				<section>
 					<div>
 						<h2>A modern application is:</h2>
 						<ul>
@@ -89,6 +124,104 @@
 						<br/>
 						<p id="instant-backend" style="font-style:italic">Traditional systems can't support these demands</p>
 					</div>
+				</section>
+
+				<section>
+					<h2>Two hard problems here</h2>
+					<!-- Two hard problems in CS, cache invalidation, naming things, and off by one errors -->
+					<br/>
+
+					<div class="fragment">
+						<p class="text-medium">How do I store and access my data?</p>
+					</div>
+					
+					<div class="fragment">
+						<p class="text-medium">How do I sync that data across different clients?</p>
+					</div>
+
+				</section>
+
+				<section>
+					<!-- Realtime Data is the Future -->
+					<div class="fragment">
+						<p class="text-medium">Twitter</p>
+						<small class="text-small">The pulse of the world</small>
+					</div>
+					<div class="fragment">
+						<p class="text-medium">Uber</p>
+						<small class="text-small">Come get me, now</small>
+					</div>
+					<div class="fragment">
+						<p class="text-medium">Google Docs</p>
+						<small class="text-small">Collobrate and sync documents across the world</small>
+					</div>
+					<div class="fragment">
+						<p class="text-medium">Facebook</p>
+						<small class="text-small">Share cat photos</small>
+					</div>
+
+					<div class="fragment">
+						<br />
+						<p class="text-medium">Common Denominator? Lots of engineering</p>
+					</div>
+
+				</section>
+
+<!-- 				<section>
+					<h2>Data storage solutions</h4>
+					<br/>
+					<div class="fragment">
+						<p class="text-medium">SQLite</p>
+						<small class="text-small">On device storage, like Core Data on iOS</small><br/>
+						<small class="text-small">No sync capability, doesn't scale</small>
+					</div>
+
+					<div class="fragment">
+						<p class="text-medium">LAMP/MEAN Stack</p>
+						<small class="text-small">Server + Database + API endpoints</small><br/>
+						<small class="text-small">Create complex schemas, infrastructure heavy, maintenance is difficult</small>
+					</div>
+
+					<div class="fragment">
+						<p class="text-medium">Cloud Services</p>
+						<small class="text-small">You specify the data and behavior, not the implementation</small><br/>
+						<small class="text-small">Lower overhead, less expensive, but not not as flexible</small>
+					</div>
+
+				</section>
+
+				<section>
+					<h2>Data transport solutions</h4>
+					<br/>
+					<div class="fragment">
+						<p class="text-medium">Polling</p>
+						<small class="text-small">Sending AJAX requests in regular intervals</small> <br />
+						<small class="text-small">Not efficient and will not scale</small>
+					</div>
+
+					<div class="fragment">
+						<p class="text-medium">Server Sent Events</p>
+						<small class="text-small">Push data to the browser</small> <br />
+						<small class="text-small">Better, but still not ideal, due to poor browser support</small>
+					</div>
+
+					<div class="fragment">
+						<p class="text-medium">Websockets</p>
+						<small class="text-small">Two-way data push</small> <br />
+						<small class="text-small">Ideal for transport, but can't store data</small>
+					</div>
+
+				</section> -->
+
+				<section data-hero="">
+					<h3>How do we turn this...</h3>
+					<!-- <p>Our backend isn't just that one box, it's much more complicated</p> -->
+					<img src="/img/data-sync.gif" alt="">
+				</section>
+
+				<section data-hero="">
+					<h3>...into this?</h3>
+					<img src="/img/yo-socket.gif" alt="">
 				</section>
 
 				<section>
