@@ -44,9 +44,10 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h2>Building realtime applications with Firebase</h2>
+					<h2>Building Realtime Applications</h2>
+					<br/>
 					<!-- <img src="/img/mark.png"/> -->
-					<img class="intro" src="/img/1871_logo.png"/>
+					<img class="intro" src="/img/dbc.png"/>
 				</section>
 
 				<section>
@@ -58,7 +59,6 @@
 						<li>What's wrong with app development?</li>
 						<li>How can Firebase help?</li>
 						<li>Live coding demo!</li>	
-						<li>Classkick + Firebase</li>
 						</ul>
 					</div>
 				</section>
@@ -232,7 +232,7 @@
                         <br/><br/>
                     <div class="fb-point" style="margin:20px;font-size: .8em"><span class="g-bold" style="font-weight:bold">Data:</span> store and sync data across clients
                     </div>
-                    <div class="fb-point" style="margin:20px;font-size: .8em"><span class="g-bold" style="font-weight:bold">Authentication:</span> easily authenticate users across multiple providers
+                    <div class="fb-point" style="margin:20px;font-size: .8em"><span class="g-bold" style="font-weight:bold">Security:</span> SSL by default, granular security rules, authenticate users across multiple providers
                     </div>
                     <div class="fb-point" style="margin:20px;font-size: .8em"><span class="g-bold" style="font-weight:bold">Hosting:</span> production-grade static asset hosting
                     </div>
@@ -253,7 +253,7 @@
                         <br/>
                         <li>1M concurrent connections <br/> on Firebase sites</li>
                         <br/>
-                        <li>Customers include: Citrix, CBS, <br/>Twitch, Nest, and Instacart</li>
+                        <li>Customers include: Citrix, CBS, <br/>Twitch, and Nest</li>
                         <br/>
                     </ul>
                 </section>
@@ -268,7 +268,7 @@
 					<br/><br/>
 					<h4>Write Data to Firebase</h4>
 					<pre><code data-trim>
-var ref = new Firebase("https://1871.firebaseio-demo.com/");
+var ref = new Firebase("https://dev-bootcamp.firebaseio-demo.com/");
 ref.set("Hello Chicago!");</code></pre>
 					<br/><br/>
 					<h4>Read Data from Firebase</h4>
