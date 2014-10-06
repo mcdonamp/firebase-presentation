@@ -47,7 +47,7 @@
 					<h2>Building Realtime Applications</h2>
 					<br/>
 					<!-- <img src="/img/mark.png"/> -->
-					<img class="intro" src="/img/dbc.png"/>
+					<img class="intro" src="/img/ge-social-logo.gif"/>
 				</section>
 
 				<section>
@@ -58,7 +58,9 @@
 						<li>Who am I?</li>
 						<li>What's wrong with app development?</li>
 						<li>How can Firebase help?</li>
-						<li>Live coding demo!</li>	
+						<li>Live demo #1: Chat</li>	
+						<li>How can this be applied to things?</li>	
+						<li>Live demo #2: IoT</li>	
 						</ul>
 					</div>
 				</section>
@@ -110,6 +112,17 @@
 					<p>Our backend isn't just that one box, it's much more complicated</p>
 					<img src="/img/data-sync.gif" alt="">
 				</section> -->
+
+				<section data-hero="">
+					<h3>How do we turn this...</h3>
+					<!-- <p>Our backend isn't just that one box, it's much more complicated</p> -->
+					<img src="/img/data-sync.gif" alt="">
+				</section>
+
+				<section data-hero="">
+					<h3>...into this?</h3>
+					<img src="/img/yo-socket.gif" alt="">
+				</section>
 				
 				<section>
 					<div>
@@ -213,17 +226,6 @@
 
 				</section> -->
 
-				<section data-hero="">
-					<h3>How do we turn this...</h3>
-					<!-- <p>Our backend isn't just that one box, it's much more complicated</p> -->
-					<img src="/img/data-sync.gif" alt="">
-				</section>
-
-				<section data-hero="">
-					<h3>...into this?</h3>
-					<img src="/img/yo-socket.gif" alt="">
-				</section>
-
 				<section>
 					<h2>What is Firebase?</h2>
                     <br/>
@@ -268,8 +270,8 @@
 					<br/><br/>
 					<h4>Write Data to Firebase</h4>
 					<pre><code data-trim>
-var ref = new Firebase("https://dev-bootcamp.firebaseio-demo.com/");
-ref.set("Hello Chicago!");</code></pre>
+var ref = new Firebase("https://firstbuild.firebaseio-demo.com/");
+ref.set("Hello Louisville!");</code></pre>
 					<br/><br/>
 					<h4>Read Data from Firebase</h4>
 					<pre><code data-trim>
@@ -278,6 +280,43 @@ ref.on("value", function (snapshot) {
 	console.log(data);
 });
 					</code></pre>
+				</section>
+
+				<section>
+					<h2>Live Demo #1: Realtime Chat</h2>
+				</section>
+
+				<section>
+					<h2>Why Firebase for IoT?</h2>
+					<br/>
+					<div class="fragment">
+						<p class="text-medium">Things are interrupt driven</p>
+					</div>
+					<div class="fragment">
+						<p class="text-medium">Firebase is event driven</p>
+					</div>
+				</section>
+
+				<section>
+					<h2>Special considerations</h2>
+					<ul>
+						<li>Security: HTTPS, server side security rules</li>
+						<li>Connectivity: Gatewayless solution (Ethernet or WiFi)</li>
+						<li>Offline: Great offline story (local cache)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Compatible hardware</h2>
+					<ul>
+						<li>uLinux: Raspberry Pi, Beaglebone, etc.</li>
+						<li>uC: Electric Imp, Tessel, etc.</li>
+						<li>Bare metal: REST Streaming (EventSource)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Live Demo #2: IoT</h2>
 				</section>
 
 				<section>
@@ -297,9 +336,6 @@ ref.on("value", function (snapshot) {
 					<p class="g-bold">Thank You!</p>
 				</section>
 
-				<section>
-					<h2>Live Coding Demo!</h2>
-				</section>
 			</div>
 
 		</div>
